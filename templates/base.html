@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!--Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="BitQT">
+  <meta name="author" content="XXXX">
+  <title>首页</title>
+  <link rel="canonical" href="">
+  <!--Favicons-->
+  <link>
+  <meta name="theme-color" content="#">
+<!--Vue-->
+  <script type="text/javascript" src="/static/core/vue.3.2.13.js"></script>
+
+  <!--jQuery-->
+  <script type="text/javascript" src="/static/core/jquery-3.6.0/js/jquery-3.6.0.min.js"></script>
+
+  <!--BootstrapJs-->
+  <script type="text/javascript" src="/static/core/bootstrap-5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" type="text/css" href="/static/core/bootstrap-5.1.3/dist/css/bootstrap.min.css" />
+
+  <!--bootstrap-datepickerJs-->
+  <script type="text/javascript" src="/static/core/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"></script>
+  <script type="text/javascript" src="/static/core/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.ja.min.js"></script>
+  <!--bootstrap-datepicker CSS-->
+  <link rel="stylesheet" type="text/css" href="/static/core/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.min.css"/>
+
+  <!--Custom styles-->
+  <link rel="stylesheet" type="text/css" href="/static/core/css/common.css" />
+  <!--OptionalJavaScript-->
+
+  <!--favicon icon-->
+  <link rel="shortcut icon" href="/static/core/image/favicon.ico" type="image/x-icon">
+
+</head>
+<!-- <body> -->
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary-grey">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">首页{{title}}</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Togglenavigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" id="menu">
+      </div> -->
+      {% block home %} {% endblock%}
+    </div>
+  </nav>
+  <main role="main" class="container-fluid" style="background-image: url(/static/core/image/bg.svg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;">
+    <div class="container" style="min-height:800px;">
+      <!--主体画面-->
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+</body>
+<!--js-->
+<!-- <script type="text/javascript" src="/static/js/base.js"></script> -->
+
+</html>
